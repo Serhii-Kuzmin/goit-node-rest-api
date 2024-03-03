@@ -20,8 +20,8 @@ export const removeContact = async (contactId) =>
 export const deleteContactByFilter = (filter) =>
   Contact.findOneAndDelete(filter);
 
-export const addContact = async ({ name, email, phone, owner }) =>
-  Contact.create({ name, email, phone, owner });
+export const addContact = async ({ name, email, phone, avatarURL, owner }) =>
+  Contact.create({ name, email, phone, avatarURL, owner });
 
 export const updateContact = async (contactId, body) =>
   Contact.findByIdAndUpdate(contactId, body);
